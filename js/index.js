@@ -3,6 +3,9 @@
 // VARIABLES
 let btn = document.querySelectorAll(".btn");
 
+let bus = document.querySelector('.bus-img');
+
+
 // FUNCTIONS
 let colorGreen = (e) => {
 e.target.style.backgroundColor = 'green';
@@ -10,6 +13,10 @@ e.target.style.backgroundColor = 'green';
 
 let colorBlue = (e) => {
     e.target.style.backgroundColor = 'blue';
+};
+
+let busToText = (e) => {
+    e.target.src = '';
 };
 
 
@@ -21,3 +28,7 @@ for (let i = 0; i < btn.length; i++) {
 for (let i = 0; i < btn.length; i++) {
     btn[i].addEventListener('dblclick', colorBlue);
 }
+
+bus.addEventListener('mouseover', busToText);
+
+
